@@ -1,0 +1,20 @@
+//
+//  MenuButtonPreferenceViewSetter.swift
+//  FloatingButton
+//
+//  Created by Madalin Zaharia on 10.01.2023.
+//
+
+import SwiftUI
+
+struct MenuButtonPreferenceViewSetter: View {
+    
+    var body: some View {
+        GeometryReader { geometry in
+            Rectangle()
+                .fill(Color.clear)
+                .preference(key: MenuButtonPreferenceKey.self,
+                            value: [geometry.frame(in: .named("FloatingButtonSpace"))])
+        }
+    }
+}
